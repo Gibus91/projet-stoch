@@ -1,3 +1,4 @@
+package com.polytech.stoch;
 
 public class test {
 
