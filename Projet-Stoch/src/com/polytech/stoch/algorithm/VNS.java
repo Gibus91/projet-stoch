@@ -4,9 +4,12 @@ import com.polytech.stoch.data.Solution;
 import com.polytech.stoch.data.problemData;
 
 public class VNS extends Algorithm {
+	
+	private int nbIterationsMax;
+	private int nbVisitesMax;
 
 	protected Solution solve(problemData probleme) {
-		// TODO Auto-generated method stub
+		
 		return null;
 	}
 
