@@ -1,4 +1,4 @@
-package com.polytech.stoch;
+package com.polytech.stoch.data;
 
 public class problemData {
 

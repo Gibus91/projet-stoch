@@ -1,4 +1,4 @@
-package com.polytech.stoch;
+package com.polytech.stoch.data;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -14,7 +14,11 @@ import java.util.StringTokenizer;
  * 
  */
 public class problemFile {
-
+	/**
+	 * 
+	 * @param chemin
+	 * @return
+	 */
 	public static problemData parseFile(String chemin) {
 		problemData problem = null;
 		try {
@@ -38,22 +42,24 @@ public class problemFile {
 					token = new StringTokenizer(ligne, delim);
 					while (token.hasMoreElements()) {
 						String line = token.nextElement().toString();
-						// System.out.println(line);
+						// On récupére le nombre de produit
 						if (line.contentEquals("P")) {
 							productTypes = Integer.parseInt(token.nextToken());
 						}
-
+						// On récupére le cout de stockage
 						if (line.contentEquals("h")) {
 							holdingCosts = Float.parseFloat(token.nextToken());
 						}
-
+						// On récupére le cout de démarrage
 						if (line.contentEquals("pi")) {
 							setupCosts = Float.parseFloat(token.nextToken());
 						}
-
+						// On récupére le nombre de noeud dans l'arbre
 						if (line.contentEquals("nodes")) {
 							nbNodes = Integer.parseInt(token.nextToken());
 						}
+						// On récupére le nombre de scénarios présent dans
+						// l'arbre
 						if (line.contentEquals("scenarios")) {
 							nbScenarios = Integer.parseInt(token.nextToken());
 						}

@@ -1,4 +1,7 @@
-package com.polytech.stoch;
+package com.polytech.stoch.main;
+
+import com.polytech.stoch.data.problemData;
+import com.polytech.stoch.data.problemFile;
 
 public class MainClass {
 
