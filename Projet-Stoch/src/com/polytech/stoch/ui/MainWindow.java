@@ -12,6 +12,7 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 
 import com.polytech.stoch.algorithm.Algorithm;
+import com.polytech.stoch.data.ResultWriter;
 import com.polytech.stoch.data.Solution;
 import com.polytech.stoch.data.problemData;
 import com.polytech.stoch.data.problemFile;
@@ -22,7 +23,7 @@ public class MainWindow extends JFrame implements ActionListener {
 	private ResultView resultView;
 	private SettingPanel settingPanel;
 	private JButton saveButton;
-	private String nomFichier;
+	private String fileName;
 
 	public MainWindow() {
 		super("Stochastic project");
@@ -66,7 +67,6 @@ public class MainWindow extends JFrame implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		// Rajouter l'Žcriture dans le fichier
-
+		ResultWriter.save(fileName, resultView.getText());
 	}
 }
