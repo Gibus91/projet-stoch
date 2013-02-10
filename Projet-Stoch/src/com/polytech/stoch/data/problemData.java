@@ -70,6 +70,10 @@ public class problemData {
 	public int[] getParents() {
 		return parents;
 	}
+	
+	public int getParent(int i){
+		return parents[i];
+	}
 
 	public void setParents(int[] parents) {
 		this.parents = parents;
@@ -78,6 +82,10 @@ public class problemData {
 	public int[][] getDemand() {
 		return demand;
 	}
+	
+	public int getDemand(int i, int j){
+		return demand[i][j];
+	}
 
 	public void setDemand(int[][] demand) {
 		this.demand = demand;
@@ -85,6 +93,10 @@ public class problemData {
 
 	public float[] getProbability() {
 		return probability;
+	}
+	
+	public float getProbability(int i){
+		return probability[i];
 	}
 
 	public void setProbability(float[] probability) {
