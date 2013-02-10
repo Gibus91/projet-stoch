@@ -19,7 +19,7 @@ public class problemFile {
 	 * @param chemin
 	 * @return
 	 */
-	public static problemData parseFile(String chemin) {
+	public static problemData parseFile(String chemin)throws FileErrorException {
 		problemData problem = null;
 		try {
 			FileReader fr = new FileReader(new File(chemin));

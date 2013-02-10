@@ -60,7 +60,7 @@ public class SettingPanel extends JPanel implements ActionListener {
 	private void layoutComponents() {
 		this.setLayout(new GridBagLayout());
 		GridBagConstraints gbc = new GridBagConstraints();
-		gbc.insets = new Insets(0, 0, 10, 10);
+		gbc.insets = new Insets(0, 0, 20, 20);
 
 		addToPanel(new JLabel("File"), gbc, 0, 0);
 		// addToPanel(fileChooser, gbc, 1, 0);
@@ -96,13 +96,12 @@ public class SettingPanel extends JPanel implements ActionListener {
 		launchButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Algorithm algo = null;
-				System.out.println(nbNeighbourhood.getText());
 				for (int i = 0; i < radioButtons.length && algo == null; i++) {
 					if (radioButtons[i].isSelected())
 						algo = algorithms[i];
 				}
-				/*if (file != null)
-					window.runSolve(algo, file.getAbsolutePath());*/
+				if (file != null)
+					window.runSolve(algo, file.getAbsolutePath());
 			}
 		});
 		addToPanel(launchButton, gbc, 0, 10);

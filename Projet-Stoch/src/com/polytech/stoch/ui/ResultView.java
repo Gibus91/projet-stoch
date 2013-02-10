@@ -4,6 +4,10 @@ import java.awt.Dimension;
 
 import javax.swing.JTextArea;
 
+import com.polytech.stoch.algorithm.Algorithm;
+import com.polytech.stoch.data.Solution;
+import com.polytech.stoch.data.problemData;
+
 
 public class ResultView extends JTextArea {
 
@@ -20,7 +24,13 @@ public class ResultView extends JTextArea {
 	}
 
 
-	public void afficherTexte(String message) {
-		this.setText(message);
+	public void afficherTexte(Algorithm algorithm, problemData problem, Solution solution) {
+		StringBuilder sb = new StringBuilder();
+		if (solution == null) {
+			sb.append("There is no solution available for this problem.");
+		} else {
+			sb.append("The best solution : " + algorithm.getName()+".\n");
+		}
+		this.setText(sb.toString());
 	}
 }

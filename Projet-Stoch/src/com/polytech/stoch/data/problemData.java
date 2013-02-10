@@ -10,6 +10,7 @@ public class problemData {
 	private int[] parents;
 	private int[][] demand;
 	private float[] probability;
+	private static double lostSales = 0.05;
 
 	/**
 	 * TODO : Il manque des trucs?
@@ -101,6 +102,10 @@ public class problemData {
 
 	public void setProbability(float[] probability) {
 		this.probability = probability;
+	}
+	
+	public double getLostSales(){
+		return lostSales;
 	}
 
 }

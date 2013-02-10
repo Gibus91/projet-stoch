@@ -11,7 +11,6 @@ public class MainClass {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		problemData problem = problemFile.parseFile("./data/data_2012_3stage.dat");
 		new MainWindow();
 		
 	}
