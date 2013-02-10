@@ -1,7 +1,5 @@
 package com.polytech.stoch.data;
 
-import java.util.Arrays;
-
 public class problemData {
 
 	private int productTypes;
@@ -13,8 +11,9 @@ public class problemData {
 	private int[][] demand;
 	private float[] probability;
 
-	// private tree ->[node n - a(n) - t(n)]
-	// private tree ->[p(n) - x_1(n) - x_2(n) - ... ]
+	/**
+	 * TODO : Il manque des trucs?
+	 */
 
 	public problemData(int productTypes, int nbNodes, int nbScenarios) {
 
@@ -24,30 +23,9 @@ public class problemData {
 		this.nbNodes = nbNodes;
 		this.nbScenarios = nbScenarios;
 		this.parents = new int[this.getNbNodes() + 1];
-		this.setDemand(new int[this.getNbNodes() + 1][this.getProductTypes()]);
+		this.demand = new int[this.getNbNodes() + 1][this.getProductTypes()];
 		this.setProbability(new float[this.getNbNodes() + 1]);
 	}
-
-	
-
-	
-
-
-	@Override
-	public String toString() {
-		return "problemData [productTypes=" + productTypes + ", holdingCosts="
-				+ Arrays.toString(holdingCosts) + ", setupCosts="
-				+ Arrays.toString(setupCosts) + ", nbNodes=" + nbNodes
-				+ ", nbScenarios=" + nbScenarios + ", parents="
-				+ Arrays.toString(parents) + ", demand="
-				+ Arrays.toString(demand) + ", probability="
-				+ Arrays.toString(probability) + "]";
-	}
-
-
-
-
-
 
 	public int getProductTypes() {
 		return productTypes;
